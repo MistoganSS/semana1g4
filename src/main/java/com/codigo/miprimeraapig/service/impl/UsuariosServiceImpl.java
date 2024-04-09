@@ -55,4 +55,9 @@ public class UsuariosServiceImpl implements UsuariosService {
         usuariosRespository.deleteById(id);
     }
 
+    @Override
+    public List<UsuariosEntity> buscarPorNombre(String nombre) {
+        return usuariosRespository.findByNombresContainingIgnoreCase(nombre);
+    }
+
 }

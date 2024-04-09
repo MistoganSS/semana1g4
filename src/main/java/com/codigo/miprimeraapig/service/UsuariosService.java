@@ -13,4 +13,5 @@ public interface UsuariosService {
     UsuariosEntity actualizarUsuario(Long id, UsuariosEntity usuariosEntity);
 
     void borrarUsuario(Long id);
+    List<UsuariosEntity> buscarPorNombre(String nombre);
 }

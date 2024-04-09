@@ -54,5 +54,14 @@ public class UsuariosController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/buscarxnombre")
+    public ResponseEntity<List<UsuariosEntity>> buscarPorNombre(@RequestParam String nombre){
+        List<UsuariosEntity> usuarios=usuariosService.buscarPorNombre(nombre);
+        if(usuarios.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }else{
+            return ResponseEntity.ok(usuarios);
+        }
+    }
 
 }

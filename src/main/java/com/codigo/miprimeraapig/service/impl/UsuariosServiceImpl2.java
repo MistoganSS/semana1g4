@@ -42,4 +42,9 @@ public class UsuariosServiceImpl2 implements UsuariosService {
     public void borrarUsuario(Long id) {
 
     }
+
+    @Override
+    public List<UsuariosEntity> buscarPorNombre(String nombre) {
+        return null;
+    }
 }
